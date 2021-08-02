@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+
+<body>
+
+    <h1>Forms</h1>
+    <button>Outside form</button>
+
+    <!--Action = Where the data shld be sent when the form is submitted -->
+    <form action="/form">
+
+        <div>
+            <!-- name = "name --"file:///F:/form?name=Priyanka+Chopra -->
+            <label for="username">Enter a Username: </label>
+            <input id="username" type="text" placeholder="Username" name="name">
+            <!-- for and id are written same to tell that they are connected -->
+        </div>
+        <p>
+            <label for="password">Enter your Password: </label>
+            <input id="password" type="password" placeholder="Password" name="password">
+        </p>
+        <div>
+            <label for="colour">Favorite color: </label>
+            <input id="colour" type="color">
+        </div>
+        <p>
+            <label for="no">Enter a number: </label>
+            <input id="no" type="number" placeholder="Up to 1000" min="1" max="1000">
+        </p>
+        <!-- text area -->
+        <p>
+            <label for="request">Any special request?</label>
+            <br>
+            <textarea name="requst" id="request" cols="40" rows="10" placeholder="Type something here"></textarea>
+        </p>
+        <button type="button">Do not submit</button>
+
+        <button type="submit">Do not submit!!</button>
+        <button>Submit</button>
+    </form>
+
+    <h2>Hijacking Searches</h2>
+
+    <h3>Google</h3>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search Google</button>
+    </form>
+
+    <h3>Youtube</h3>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query" placeholder="Youtube search">
+        <!-- <button>Search Youtube</button> -->
+    </form>
+
+    <!-- Check box -->
+    <h2>More Inputs</h2>
+    <form action="/birds">
+        <input type="checkbox" name="Agree" id="agree" checked>
+        <label for="agree">I agree to everthing</label>
+
+        <!-- RADIO BUTTON to select onebutton there name shld be same to interlink them-->
+
+        <p>
+            <input type="radio" name="size" id="xs" value="xs">
+            <label for="xs">XS</label>
+            <input type="radio" name="size" id="s" value="s">
+            <label for="s">S</label>
+            <input type="radio" name="size" id="m" value="m">
+            <label for="m">M</label>
+        </p>
+        <p>
+            <label for="meal">Please select an entree</label>
+            <select name="meal" id="meal">
+                <option value="noodle">Noodles</option>
+                <option value="pizza" selected>Pizza</option>
+                <option value="pasta">Pasta</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="cheese">Amount of Cheese</label>
+            <input type="range" name="Cheese_level" id="cheese" min="1" max="100" step="5">
+        </p>
+        <button>Submit</button>
+    </form>
+
+    <h2>Validation Demo</h2>
+    <form action="/dummy">
+        <label for="first">Enter your First Name</label>
+        <input type="text" ,name="fname" , id="first" required>
+        <p>
+            <label for="username">Username</label>
+            <input type="text" , name="username" , id="username" ,maxlenth="20" minlength="5" , required>
+        </p>
+        <p>
+            <input type="email" , required, placeholder="Email id">
+            <input type="url" , required, placeholder="URL">
+        </p>
+        <br>
+        <button>Submit</button>
+    </form>
+
+</body>
+
+</html>
